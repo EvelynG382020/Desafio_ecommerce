@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  token: MyString
+  state: MyString
+  total: 9.99
+  order: one
+  payment_method: one
+
+two:
+  token: MyString
+  state: MyString
+  total: 9.99
+  order: two
+  payment_method: two
