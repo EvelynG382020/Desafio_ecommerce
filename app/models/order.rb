@@ -12,7 +12,7 @@ class Order < ApplicationRecord
   end
 
   def set_state_completed #metodo para indicar el estado de la order completado
-    update_attributes(state: 'completed')
+    update_attribute(state: "completed")
   end
 
   def add_product(product_id, quantity)
