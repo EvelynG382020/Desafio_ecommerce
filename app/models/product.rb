@@ -8,17 +8,16 @@ class Product < ApplicationRecord
   has_many :orders, through: :order_items
   accepts_nested_attributes_for :variations, reject_if: :all_blank, allow_destroy: true
 
-  # def variations_size
-  #     variations.pluck(:size)
-  # end
 
-  # def variations_color
-  #     variations.pluck(:color)
-  # end
 
-  # def variations_stock
-  #     variations.pluck(:stock)
-  # end
-
+  def self.products_with_stock
+    products_with_stock = []
+    self.all.each do |product|
+      if product.variations.first && product.variations.first.stock > 0
+        products_with_stock << product
+      end
+    end
+    products_with_stock
+  end
 
 end
