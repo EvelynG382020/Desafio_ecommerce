@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Category, type: :model do
+RSpec.describe Order, type: :model do
     
     it 'pass total price to cents' do
         user = User.create(email: "user@example.com", password: "1234567")
